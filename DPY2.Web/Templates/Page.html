@@ -1,0 +1,33 @@
+﻿<h1>{{pageName}}</h1>
+<div class="col-md-12" ng-repeat="block in page.blocks track by $index">
+    <h2>{{block.name}}</h2>
+    <pre class="block-text">{{block.text}}</pre>
+
+    <table class="table" ng-show="block.skills.length > 0">
+        <tr>
+            <th>Skill</th>
+            <th>Description</th>
+        </tr>
+        <tr ng-repeat="skill in block.skills">
+            <td>{{skill.name}}</td>
+            <td>{{skill.text}}</td>
+        </tr>
+    </table>
+
+    <div class="col-lg-4" ng-repeat="project in block.projects">
+        <table class="table">
+            <tr>
+                <th>{{project.name}}</th>
+                <th ng-show="project.imageURI != ''"></th>
+            </tr>
+            <tr>
+                <td style="width: 1px;" ng-show="project.imageUrl != ''">
+                    <img ng-src="{{project.imageURI}}" />
+                </td>
+                <td>
+                    {{project.text}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html ng-app="accountApp">
+<head>
+    <title>DPY2 Web Admin</title>
+    <meta charset="utf-8" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/simple-sidebar.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+    <link href="/Content/account-theme.css" rel="stylesheet" />
+    <base href="/" />
+</head>
+<body>
+    <div id="wrapper">
+        <div ng-include="'Templates/Shared/_Navigation.html'"></div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3rd party libs -->
+    <script src="Scripts/jquery-2.2.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-local-storage.js"></script>
+
+    <!-- Helpers and utlities -->
+    <script src="Scripts/Helpers/utils.js"></script>
+
+    <!-- AngularJS app -->
+    <script src="Scripts/Apps/accountApp.js"></script>
+
+    <!-- AngularJS controllers -->
+    <script src="Scripts/Controllers/homeCtrl.js"></script>
+    <script src="Scripts/Controllers/authCtrl.js"></script>
+    <script src="Scripts/Controllers/loginCtrl.js"></script>
+
+    <script src="Scripts/Controllers/Pages/pagesListCtrl.js"></script>
+    <script src="Scripts/Controllers/Pages/createPageCtrl.js"></script>
+    <script src="Scripts/Controllers/Pages/editPageCtrl.js"></script>
+
+    <script src="Scripts/Controllers/Projects/projectListCtrl.js"></script>
+    <script src="Scripts/Controllers/Projects/createProjectCtrl.js"></script>
+    <script src="Scripts/Controllers/Projects/editProjectCtrl.js"></script>
+
+    <script src="Scripts/Controllers/Skills/skillListCtrl.js"></script>
+    <script src="Scripts/Controllers/Skills/createSkillCtrl.js"></script>
+    <script src="Scripts/Controllers/Skills/editSkillCtrl.js"></script>
+
+    <!-- AngularJS services -->
+    <script src="Scripts/Services/authentication.js"></script>
+    <script src="Scripts/Services/authService.js"></script>
+    <script src="Scripts/Services/authInterceptorService.js"></script>
+</body>
+</html>

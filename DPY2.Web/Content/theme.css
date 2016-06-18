@@ -1,0 +1,99 @@
+﻿pre {
+    white-space: pre-wrap; /* css-3 */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    background-color: white;
+    border: none;
+    border-radius: 0;
+    word-break: normal;
+}
+
+.navbar {
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: black;
+}
+
+    .navbar-inverse .navbar-nav > li > a:visited {
+        color: black;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:active {
+        color: black;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: red;
+    }
+
+.navbar-inverse .navbar-brand {
+    color: black;
+}
+
+    .navbar-inverse .navbar-brand:hover {
+        color: red;
+    }
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+    .navbar-inverse .navbar-toggle .icon-bar:hover {
+        background-color: red;
+    }
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+@media (min-width: 1200px) {
+    .navbar {
+        width: 50%;
+        margin: 10px auto;
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+    }
+
+        .navbar a {
+            font-size: 14pt;
+        }
+
+    .navbar-header {
+        width: 100%;
+        display: block;
+    }
+
+        .navbar-header a {
+            font-size: 24pt;
+            color: black;
+        }
+
+    .navbar-brand {
+        padding-left: 30px;
+    }
+
+    #site-content {
+        min-height: 100vh;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    #main-menu {
+        padding: 0;
+    }
+}
+
+@media (min-width: 993px) {
+    body {
+        background-image: url(../Content/images/bg.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}

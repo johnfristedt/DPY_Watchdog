@@ -1,0 +1,140 @@
+﻿@keyframes minimize {
+    0% {
+        height: 100%;
+    }
+
+    100% {
+        height: 10%;
+    }
+}
+
+@keyframes minimize-buttons {
+    0% {
+    }
+}
+
+nav {
+    color: white;
+}
+
+#main-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2f313f;
+    z-index: 1;
+}
+
+#logo {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 40vw;
+}
+
+#menu-wrapper {
+    position: relative;
+    top: 0;
+    width: 80vw;
+    min-height: 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.menu-button {
+    position: relative;
+    top: 0;
+    width: 39vw;
+    height: 20vh;
+    min-height: inherit;
+    margin: 0 0 1vw 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 5vw;
+}
+
+    .menu-button:first-of-type {
+        margin-right: 0;
+    }
+
+    .menu-button:last-of-type {
+        margin-left: 0;
+    }
+
+.menu-minimize {
+    -moz-animation: minimize 1s ease 1 forwards;
+    -o-animation: minimize 1s ease 1 forwards;
+    -webkit-animation: minimize 1s ease 1 forwards;
+    animation: minimize 1s ease 1 forwards;
+}
+
+    .menu-minimize #logo {
+        display: none;
+    }
+
+    .menu-minimize #menu-wrapper {
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        margin: 0;
+    }
+
+    .menu-minimize .menu-button {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 20vw;
+        height: 100%;
+        margin: 0;
+    }
+
+@media (min-width: 1000px) {
+    .menu-button {
+        font-size: 36pt;
+    }
+}
+
+@media (min-width: 769px) {
+    #logo {
+        top: 22vh;
+        font-size: 20em;
+    }
+
+    #menu-wrapper {
+        width: 100vw;
+        top: 20vh;
+    }
+
+    .menu-button {
+        width: 20vw;
+        height: 12vw;
+        max-width: 200px;
+        max-height: 120px;
+        -moz-transition-duration: 0.1s;
+        -o-transition-duration: 0.1s;
+        -webkit-transition-duration: 0.1s;
+        transition-duration: 0.1s;
+        -moz-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+    }
+
+        .menu-button:hover {
+            top: 1vw;
+            margin: 0;
+        }
+
+    .menu-minimize .menu-button:hover {
+        top: 0;
+    }
+}

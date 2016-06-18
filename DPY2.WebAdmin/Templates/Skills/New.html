@@ -1,0 +1,16 @@
+﻿<div class="col-md-6">
+    <form ng-submit="createSkill()">
+        <fieldset>
+            <legend>New skill</legend>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" class="form-control" ng-model="newSkill.name" />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="5" class="form-control" ng-model="newSkill.text" />
+            </div>
+            <button type="submit" class="btn btn-default">Create</button>
+        </fieldset>
+    </form>
+</div>

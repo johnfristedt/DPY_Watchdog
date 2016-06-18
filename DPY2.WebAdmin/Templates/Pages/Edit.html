@@ -1,0 +1,53 @@
+﻿<div class="col-md-8">
+    <input type="text" id="page-title" ng-model="page.name" />
+    <div class="col-md-12" ng-repeat="block in page.blocks track by $index | orderBy: pageIndex">
+        <input type="text" class="block-title" ng-model="block.name" />
+
+        <span class="glyphicon glyphicon-remove clickable right" ng-click="deleteBlock(block.id)"></span>
+        <span class="glyphicon glyphicon-arrow-down clickable right" ng-click="moveBlock($index, 1)"></span>
+        <span class="glyphicon glyphicon-arrow-up clickable right" ng-click="moveBlock($index, -1)"></span>
+
+        <a href="/Skills" a class="glyphicon glyphicon glyphicon-edit clickable right" ng-show="block.skills.length > 0"></a>
+        <a href="/Projects" a class="glyphicon glyphicon glyphicon-edit clickable right" ng-show="block.projects.length > 0"></a>
+        <textarea class="block-text" ng-show="block.text" ng-model="block.text"></textarea>
+
+        <table class="table" ng-show="block.skills.length > 0">
+            <tr>
+                <th>Skill</th>
+                <th>Description</th>
+            </tr>
+            <tr ng-repeat="skill in block.skills">
+                <td><textarea class="block-text" ng-model="skill.name"></textarea></td>
+                <td><textarea class="block-text" ng-model="skill.text"></textarea></td>
+            </tr>
+            <tr>
+                <td><a ng-href="/Skills/New/{{block.id}}" class="btn btn-default">Add skill</a></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div ng-show="block.projects.length > 0">
+            <div class="col-lg-4" ng-repeat="project in block.projects track by $index">
+                <table class="table">
+                    <tr>
+                        <th>{{project.name}}</th>
+                        <th ng-show="project.imageURI != ''"></th>
+                    </tr>
+                    <tr>
+                        <td style="width: 1px;" ng-show="project.imageUrl != ''">
+                            <img ng-src="{{project.imageURI}}" />
+                        </td>
+                        <td>
+                            <textarea class="block-text" ng-model="project.text"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <a ng-href="/Projects/New/{{block.id}}" class="btn btn-default">Add project</a>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-default" ng-click="updatePage()">Update</button>
+        <button type="button" class="btn btn-default" ng-click="createBlock()">Add block</button>
+    </div>
+</div>

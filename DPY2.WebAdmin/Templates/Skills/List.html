@@ -1,0 +1,18 @@
+﻿<div class="col-md-8">
+    <h1>Skills <span class="glyphicon glyphicon-plus" ng-click="newSkill()"></span></h1>
+    <table class="table">
+        <tr>
+            <th>Skill name</th>
+            <th>Skill description</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="skill in skills track by $index">
+            <td>{{skill.name}}</td>
+            <td>{{skill.text}}</td>
+            <th>
+                <span class="glyphicon glyphicon-edit" ng-click="editSkill(skill.id)"></span>
+                <span class="glyphicon glyphicon-remove" ng-click="deleteSkill(skill.id)"></span>
+            </th>
+        </tr>
+    </table>
+</div>

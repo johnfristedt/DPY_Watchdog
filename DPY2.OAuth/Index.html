@@ -1,0 +1,36 @@
+﻿<html lang="en" ng-app="watchdogApp">
+<head>
+    <title>Watchdog login</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <base href="/" />
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <div ng-view></div>
+    </main>
+
+    <!-- 3rd party libs -->
+    <script src="Scripts/jquery-2.2.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-local-storage.js"></script>
+
+    <!-- Helpers and utils -->
+    <script src="Scripts/Helpers/utils.js"></script>
+
+    <!-- AngularJS apps -->
+    <script src="Scripts/Apps/watchdogApp.js"></script>
+
+    <!-- AngularJS controllers -->
+    <script src="Scripts/Controllers/loginCtrl.js"></script>
+
+    <!-- AngularJS services -->
+    <script src="Scripts/Services/authentication.js"></script>
+    <script src="Scripts/Services/authInterceptorService.js"></script>
+    <script src="Scripts/Services/authService.js"></script>
+</body>
+</html>

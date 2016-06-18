@@ -1,0 +1,18 @@
+﻿<div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-4" ng-repeat="project in projects">
+        <table class="table">
+            <tr>
+                <th>{{project.name}}</th>
+                <th ng-show="project.imageURI != ''"></th>
+            </tr>
+            <tr>
+                <td style="width: 1px;" ng-show="project.imageUrl != ''">
+                    <img ng-src="{{project.imageURI}}" />
+                </td>
+                <td>
+                    {{project.text}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

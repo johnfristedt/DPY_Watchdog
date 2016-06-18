@@ -1,0 +1,26 @@
+﻿<div class="col-md-6">
+    <form ng-submit="createProject()">
+        <fieldset>
+            <legend>New project</legend>
+            <div class="form-group">
+                <label for="name">Project name</label>
+                <input id="name" type="text" class="form-control" placeholder="Project name..." ng-model="newProject.Name" />
+            </div>
+
+            <div class="form-group">
+                <label for="description">Project description</label>
+                <textarea id="description" class="form-control" rows="5" placeholder="Project description..." ng-model="newProject.Description" />
+            </div>
+
+            <div class="form-group">
+                <label for="preview">Image</label><br />
+                <img id="preview" src="" alt="No file selected..." />
+            </div>
+            <div class="form-group">
+                <input id="file" type="file" />
+            </div>
+
+            <button type="submit" class="btn btn-default">Create project</button>
+        </fieldset>
+    </form>
+</div>

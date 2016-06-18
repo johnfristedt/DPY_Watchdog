@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="dpyApp" ng-controller="mainCtrl">
+<head>
+    <title>DPY2</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/theme.css" rel="stylesheet" />
+    <base href="/" />
+</head>
+<body>
+    <header>
+        <div ng-include="'Templates/Shared/_Navigation.html'"></div>
+    </header>
+
+    <main>
+        <div id="site-content" class="col-md-6 col-md-offset-3" ng-view></div>
+    </main>
+
+    <!-- 3rd party libs -->
+    <script src="Scripts/jquery-2.2.0.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-local-storage.js"></script>
+
+    <!-- Helpers and utilities -->
+    <script src="Scripts/Helpers/utils.js"></script>
+
+    <!-- AngularJS applications -->
+    <script src="Scripts/Apps/dpyApp.js"></script>
+
+    <!-- AngularJS controllers -->
+    <script src="Scripts/Controllers/mainCtrl.js"></script>
+    <script src="Scripts/Controllers/homeCtrl.js"></script>
+    <script src="Scripts/Controllers/pageCtrl.js"></script>
+</body>
+</html>

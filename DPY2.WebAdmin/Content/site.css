@@ -1,0 +1,48 @@
+﻿.block-text {
+    width: 100%;
+    height: auto;
+    border: none;
+    resize: none;
+}
+
+.block-text:focus {
+    min-height: 100px;
+    border: 1px solid black;
+    resize: vertical;
+}
+
+#page-title, .block-title {
+    border: none;
+}
+
+#page-title {
+    display: block;
+    font-size: 24pt;
+}
+
+.block-title {
+    display: inline-block;
+    font-size: 18pt;
+}
+
+.list-page:hover, .clickable:hover {
+    cursor: pointer;
+}
+
+.list-page:hover {
+    background-color: #e0e0e0;
+}
+
+.clickable:hover {
+    color: dimgray;
+}
+
+.td-right {
+    text-align: right;
+}
+
+.right {
+    float: right;
+    padding-left: 5px;
+    font-size: 12pt;
+}

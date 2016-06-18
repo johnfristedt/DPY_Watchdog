@@ -1,0 +1,22 @@
+﻿<div class="col-md-8">
+    <h1>Projects</h1>
+    <table class="table">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="project in projects track by $index">
+            <td style="width: 1%">
+                <img style="width: 75px" ng-src="{{project.ImageURL + project.ImageFileName}}" />
+            </td>
+            <td>{{project.Name}}</td>
+            <td>{{project.Description}}</td>
+            <td>
+                <span class="glyphicon glyphicon-edit" ng-click="editProject(project.Id)"></span>
+                <span class="glyphicon glyphicon-remove" ng-click="deleteProject(project.Id)"></span>
+            </td>
+        </tr>
+    </table>
+</div>

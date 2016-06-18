@@ -1,0 +1,29 @@
+﻿<!--<nav id="main-menu" class="menu-minimize">
+    <div id="logo">JF</div>
+    <div id="menu-wrapper">
+        <button type="button" class="menu-button">About</button>
+        <button type="button" class="menu-button">Skills</button>
+        <button type="button" class="menu-button">Projects</button>
+        <button type="button" class="menu-button">Contact</button>
+    </div>
+</nav>-->
+
+<nav class="navbar navbar-inverse" style="border-radius: 0">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/#/">Web portfolio</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-link" href="/">About</a></li>
+                <li ng-repeat="page in pages track by $index"><a class="navbar-link" ng-href="/{{page}}">{{page}}</a></li>
+                <li><a href="/Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
